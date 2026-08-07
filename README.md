@@ -7,7 +7,7 @@ The nanoparticle is modeled as an active Brownian particle undergoing translatio
 ## Project Overview
 
 <p align="center">
-  <img src="Janus Architecture.png" width="700">
+  <img src="Janus architecture.png" width="700">
 </p>
 
 The reinforcement learning agent observes the particle's normalized distance and angular difference relative to a target, and chooses between two actions:
