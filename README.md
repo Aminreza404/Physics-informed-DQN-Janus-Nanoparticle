@@ -6,21 +6,21 @@ The nanoparticle is modeled as an active Brownian particle undergoing translatio
 
 The particle dynamics are described by overdamped Langevin equations:
 
-$$
-d\mathbf{r}
-===========
+<p align="center">
+  <b>Translational dynamics</b>
+</p>
 
-v_p \hat{\mathbf{n}}(\theta),dt
-+
-\sqrt{2D_T},d\mathbf{W}_T
-$$
+<p align="center">
+  <i>d</i>r = <i>v</i><sub>p</sub> n&#770;(<i>&theta;</i>) <i>dt</i> + &radic;(2<i>D</i><sub>T</sub>) <i>dW</i><sub>T</sub>
+</p>
 
-$$
-d\theta
-=======
+<p align="center">
+  <b>Rotational dynamics</b>
+</p>
 
-\sqrt{2D_R},dW_R
-$$
+<p align="center">
+  <i>d&theta;</i> = &radic;(2<i>D</i><sub>R</sub>) <i>dW</i><sub>R</sub>
+</p>
 
 The reinforcement learning agent observes the particle's normalized distance and angular difference relative to a target, and chooses between two actions:
 
@@ -31,7 +31,11 @@ A Double DQN architecture with experience replay and a target network is used to
 
 The simulation uses physical parameters corresponding to a nanoscale Janus particle, including translational diffusion, rotational diffusion, particle size, and a target Péclet number.
 
-The learned policy is evaluated against simple control strategies such as always ON, always OFF, and random ON/OFF.
+The learned policy is evaluated against simple control strategies such as:
+
+* Always ON
+* Always OFF
+* Random ON/OFF
 
 ## Technologies
 
