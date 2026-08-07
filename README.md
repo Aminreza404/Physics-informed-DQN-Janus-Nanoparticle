@@ -46,6 +46,19 @@ The learned policy is evaluated against simple control strategies such as:
 * Computational Physics
 * Deep Reinforcement Learning
 
+## Physical Model Reference
+
+The physical model and the parameters used for the Janus nanoparticle are based on:
+
+**"Light-Activated Self-Thermophoretic Janus Nanopropellers"**
+
+https://arxiv.org/abs/2602.17548 
+
+The Langevin dynamics, particle properties, diffusion parameters, and propulsion-related physical assumptions were adapted from the physical model presented in this work.
+
+The reinforcement learning environment, DQN implementation, reward function, training procedure, and simulation code in this repository were implemented for this project.
+
+
 ## Main File
 
 `Janus.py` 
