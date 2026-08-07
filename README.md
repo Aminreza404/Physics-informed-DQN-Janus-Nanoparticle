@@ -10,7 +10,7 @@ $$
 d\mathbf{r}
 ===========
 
-v_p\hat{\mathbf{n}}(\theta),dt
+v_p \hat{\mathbf{n}}(\theta),dt
 +
 \sqrt{2D_T},d\mathbf{W}_T
 $$
@@ -44,7 +44,7 @@ The learned policy is evaluated against simple control strategies such as always
 
 ## Main File
 
-`ENCR_DQN.ipynb`
+`Janus.py` 
 
 This project was developed for studying the application of reinforcement learning to stochastic active-matter systems.
 
