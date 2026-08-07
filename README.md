@@ -47,7 +47,7 @@ The learned policy is evaluated against simple control strategies such as:
 * Deep Reinforcement Learning
 
 <p align="center">
-  <img src="janus_particle.png" width="600">
+  <img src="Janus Architecture.png" width="600">
 </p>
 
 ## Physical Model Reference
