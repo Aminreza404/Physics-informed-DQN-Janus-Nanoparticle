@@ -46,6 +46,10 @@ The learned policy is evaluated against simple control strategies such as:
 * Computational Physics
 * Deep Reinforcement Learning
 
+<p align="center">
+  <img src="janus_particle.png" width="600">
+</p>
+
 ## Physical Model Reference
 
 The physical model and the parameters used for the Janus nanoparticle are based on:
