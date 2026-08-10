@@ -10,19 +10,27 @@ plt.rcParams['text.usetex'] = False
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu') 
 print(f'Using device: {device}') 
 
-# Physical parameters (Strictly from the paper)
 KB = 1.38e-23
-T_0 = 298.0
-eta_0 = 0.001
-R = 33e-9
+T_0 = 298.0          # Room temperature (K)
+eta_0 = 0.001        # Water viscosity at 25°C (Pa·s)
+R = 33e-9            # Janus particle radius (m)
 
-D_T = 6.49e-12      
-D_R = 1 / (0.22e-3) 
-Pe_target = 0.30
+# 1. Rotational Dynamics
+tau_R = 0.22e-3     
+D_R = 1.0 / tau_R   
+
+delta_T = 6.0     
+T_eff = T_0 + (5.0/12.0) * delta_T
+
+eta_eff = 0.95 * eta_0 
+D_HBM = (KB * T_eff) / (6.0 * np.pi * eta_eff * R)
+
+# 3. Active Self-Propulsion & Peclet Number
+Pe_target = 0.30     # Target Peclet number (Active vs Passive)
+D_T = D_HBM / (1.0 - (Pe_target**2) / 4.0)
 v_max = Pe_target * np.sqrt(D_T * D_R) 
-
-print(f"Physical Check: D_T = {D_T * 1e12:.2f} um^2/s, tau_R = {1/D_R * 1e3:.3f} ms")
-print(f"Target Pe = {Pe_target:.2f} | v_max = {v_max * 1e6:.2f} um/s\n")
+print(f"Active Transitional diffusion coefficient {D_T}")
+print(f"Hot Brownian motion diffusion coefficient {D_HBM}")
 
 class JanusNanoParticles: 
     def __init__(self):
