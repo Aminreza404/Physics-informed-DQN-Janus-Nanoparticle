@@ -27,25 +27,25 @@ The particle dynamics are described by overdamped Langevin equations.
 
 **Translational Dynamics:** The position of the particle evolves according to:
 
-dx = v_p cos(θ) dt + √(2D_T) dW_T^x
+$$dx = v_p \cos(\theta) \ dt + \sqrt{2D_T} \ dW_T^x$$
 
-dy = v_p sin(θ) dt + √(2D_T) dW_T^y
+$$dy = v_p \sin(\theta) \ dt + \sqrt{2D_T} \ dW_T^y$$
 
 **Rotational Dynamics:** The orientation angle evolves as:
 
-dθ = √(2D_R) dW_R
+$$d\theta = \sqrt{2D_R} \, dW_R$$
 
-where dW_T^x, dW_T^y, and dW_R are independent Wiener processes representing thermal fluctuations. The self-propulsion speed v_p is controlled by the laser, which the reinforcement learning agent can switch on or off to navigate toward the target.
+where $dW_T^x$, $dW_T^y$, and $dW_R$ are independent Wiener processes representing thermal fluctuations. The self-propulsion speed $v_p$ is controlled by the laser, which the reinforcement learning agent can switch on or off to navigate toward the target.
 
 The effective diffusion coefficient of the active particle is given by:
 
-D_active = D_HBM + (1/4) v² τ_R
+$$D_{\text{active}} = D_{\text{HBM}} + \frac{1}{4}v^2\tau_R$$
 
-where D_HBM represents the passive Brownian diffusion, v is the self-propulsion velocity, and τ_R is the rotational relaxation time.
+where $D_{\text{HBM}}$ represents the passive Brownian diffusion, $v$ is the self-propulsion velocity, and $\tau_R$ is the rotational relaxation time.
 
 The rotational diffusion coefficient is related to the rotational relaxation time by:
 
-D_R = 1 / τ_R
+$$D_R = \frac{1}{\tau_R}$$
 
 The simulation uses physical parameters corresponding to a nanoscale Janus particle, including translational diffusion, rotational diffusion, particle size, and a target Péclet number.
 
