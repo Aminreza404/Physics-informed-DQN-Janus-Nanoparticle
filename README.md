@@ -33,7 +33,7 @@ $$dy = v_p \sin(\theta) \ dt + \sqrt{2D_T} \ dW_T^y$$
 
 **Rotational Dynamics:** The orientation angle evolves as:
 
-$$d\theta = \sqrt{2D_R} \, dW_R$$
+$$d\theta = \sqrt{2D_R} \ dW_R$$
 
 where $dW_T^x$, $dW_T^y$, and $dW_R$ are independent Wiener processes representing thermal fluctuations. The self-propulsion speed $v_p$ is controlled by the laser, which the reinforcement learning agent can switch on or off to navigate toward the target.
 
